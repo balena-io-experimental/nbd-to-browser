@@ -20,7 +20,7 @@ type Listener struct {
 	logger          *log.Logger    // a logger
 	protocol        string         // the protocol we are listening on
 	addr            string         // the address
-	exports         []ExportConfig // a list of export configurations associated
+	Exports         []ExportConfig // a list of export configurations associated
 	defaultExport   string         // name of default export
 	tls             TlsConfig      // the TLS configuration
 	tlsconfig       *tls.Config    // the TLS configuration
@@ -177,7 +177,7 @@ func NewListener(logger *log.Logger, s ServerConfig) (*Listener, error) {
 		logger:          logger,
 		protocol:        s.Protocol,
 		addr:            s.Address,
-		exports:         s.Exports,
+		Exports:         s.Exports,
 		defaultExport:   s.DefaultExport,
 		disableNoZeroes: s.DisableNoZeroes,
 		tls:             s.Tls,

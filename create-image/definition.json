@@ -1,0 +1,33 @@
+{
+	"partitionTableType": "dos",
+	"dockerStorageDriver": "aufs",
+	"dockerImage": "petrosagg/hostapp-preview:raspberrypi3-v1",
+	"firstPartitionOffset": 4194304,
+	"partitions": [
+		{
+			"name": "resin-boot",
+			"filesystem": "vfat",
+			"size": 41943040
+		},
+		{
+			"name": "resin-rootA",
+			"filesystem": "ext4",
+			"size": 1073741824
+		},
+		{
+			"name": "resin-rootB",
+			"filesystem": "ext4",
+			"size": 1073741824
+		},
+		{
+			"name": "resin-state",
+			"filesystem": "ext4",
+			"size": 20971520
+		},
+		{
+			"name": "resin-data",
+			"filesystem": "ext4",
+			"size": 1073741824
+		}
+	]
+}

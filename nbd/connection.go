@@ -961,7 +961,7 @@ func (c *Connection) Negotiate(ctx context.Context) error {
 			done = true
 
 		case NBD_OPT_LIST:
-			for _, e := range c.listener.exports {
+			for _, e := range c.listener.Exports {
 				name := []byte(e.Name)
 				or := nbdOptReply{
 					NbdOptReplyMagic:  NBD_REP_MAGIC,
@@ -1060,7 +1060,7 @@ func (c *Connection) Negotiate(ctx context.Context) error {
 
 // getExport generates an export for a given name
 func (c *Connection) getExportConfig(ctx context.Context, name string) (*ExportConfig, error) {
-	for _, ec := range c.listener.exports {
+	for _, ec := range c.listener.Exports {
 		if ec.Name == name {
 			return &ec, nil
 		}

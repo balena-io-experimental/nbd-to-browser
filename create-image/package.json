@@ -1,0 +1,18 @@
+{
+  "name": "resin-image-maker",
+  "version": "0.0.1",
+  "description": "Creates bootable disk images.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexis Svinartchouk (alexis@resin.io)",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "dockerode": "^2.5.1",
+    "lodash": "^4.17.4",
+    "stream-to-promise": "^2.2.0",
+    "tmp": "0.0.33"
+  }
+}
